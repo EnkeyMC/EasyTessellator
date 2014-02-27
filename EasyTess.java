@@ -149,7 +149,7 @@ public class EasyTess {
 		xDim *= px;
 		yDim *= px;
 		zDim *= px;
-		tes.addVertexWithUV(x, y, z + zDim, maxU, v);
+		tes.addVertexWithUV(x, y, z + zDim, maxU, maxV);
 		tes.addVertexWithUV(x, y + yDim, z + zDim, maxU, v);
 		tes.addVertexWithUV(x, y + yDim, z, u, v);
 		tes.addVertexWithUV(x, y, z, u, maxV);
