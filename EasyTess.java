@@ -1,7 +1,7 @@
 package easytessellator;
 
 import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.util.Icon;
+import net.minecraft.util.IIcon;
 
 /**
  * 
@@ -35,7 +35,7 @@ public class EasyTess {
 	 * 1: side textures (eg. bookshelf);
 	 * 2 - 5: different textures for all sides and rotates textures by Y axis;
 	 */
-	public static void renderCube(double x, double y, double z, int xDim, int yDim, int zDim, int offsetU, int offsetV, Icon icon, int flag, int textureWidth, int textureHeight)
+	public static void renderCube(double x, double y, double z, int xDim, int yDim, int zDim, int offsetU, int offsetV, IIcon icon, int flag, int textureWidth, int textureHeight)
 	{
 		Tessellator tes = Tessellator.instance;
 		double minU = icon.getMinU();
@@ -75,7 +75,7 @@ public class EasyTess {
 	/**
 	 * Same as renderCube above, but without the texture width and height, instead using default 16x16
 	 */
-	public static void renderCube(double x, double y, double z, int xDim, int yDim, int zDim, int offsetU, int offsetV, Icon icon, int flag)
+	public static void renderCube(double x, double y, double z, int xDim, int yDim, int zDim, int offsetU, int offsetV, IIcon icon, int flag)
 	{
 		renderCube(x, y, z, xDim, yDim, zDim, offsetU, offsetV, icon, flag, 16, 16);
 	}
